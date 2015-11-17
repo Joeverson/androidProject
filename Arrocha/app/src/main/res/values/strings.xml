@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Arrocha</string>
+    <string name="number_between">0 / 0</string>
+    <string name="btn_go">Tentar</string>
+</resources>

@@ -11,7 +11,7 @@ import java.util.prefs.Preferences;
 
 public class ProcessingNumber {
     private int limitUp = 0;
-    private int limitDown = 0;
+    private int limitDown = 100;
     private int its = 0;
 
     public ProcessingNumber(){
@@ -19,12 +19,15 @@ public class ProcessingNumber {
         int i = 0;
 
         while(i < 3){
-            if(n.nextInt(100) > limitUp)
-                limitUp = n.nextInt(100);
-            else if(n.nextInt(100) < limitDown)
-                limitDown = n.nextInt(100);
-            else if(n.nextInt(100) < limitUp & n.nextInt(100) > limitDown){
-                its = n.nextInt(100);
+            i++;
+            int este = n.nextInt(100);
+
+            if(este > limitUp)
+                limitUp = este;
+            else if(este < limitDown)
+                limitDown = este;
+            else if(este < limitUp & este > limitDown){
+                its = este;
             }
         }
 
@@ -35,9 +38,7 @@ public class ProcessingNumber {
         return limitUp;
     }
 
-    public int getIts() {
-        return its;
-    }
+    public int getIts() { return its; }
 
     public int getLimitDown() {
         return limitDown;
